@@ -3,6 +3,7 @@ import {
     Card, CardImg, CardText, CardBody,
     CardTitle, CardImgOverlay
 } from 'reactstrap';
+import LoadComments from "./LoadComments";
 
 const DishDetails = (props) => {
     return (
@@ -14,6 +15,8 @@ const DishDetails = (props) => {
                         <p>{props.dishes.description}</p>
                         <p> Price: {props.dishes.price}</p>
                     </CardText>
+
+                    <LoadComments comments={props.dishes.comments} />
                 </CardBody>
             </Card>
 
