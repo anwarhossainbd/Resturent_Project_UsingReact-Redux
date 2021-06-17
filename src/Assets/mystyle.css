@@ -1,0 +1,23 @@
+
+.imgClass{
+    opacity: 0.5;
+}
+
+.marginclass{
+    margin: 1rem;
+}
+
+.overlay{
+    color: red;
+    font-size: 1.6rem;
+    top: 60%;
+    transform: translateY(-50%);
+    justify-content: center;
+    cursor: pointer;
+}
+
+.styleClass{
+    text-align: left;
+}
+
+

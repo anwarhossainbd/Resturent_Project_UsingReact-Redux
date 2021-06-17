@@ -1,5 +1,6 @@
 import React, {Component, Fragment} from 'react';
 import Header from "./header/Header";
+import Body from "./body/Body";
 
 class MainComponent extends Component {
     render() {
@@ -7,6 +8,7 @@ class MainComponent extends Component {
                <Fragment>
 
                   <Header />
+                   <Body />
 
 
                </Fragment>
