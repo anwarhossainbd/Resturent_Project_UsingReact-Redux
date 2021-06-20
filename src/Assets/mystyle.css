@@ -20,4 +20,32 @@
     text-align: left;
 }
 
+@media only screen and (max-width: 768px) {
+
+    .marginclass{
+        margin: 0.5rem;
+    }
+    .overlay{
+        font-size: 1.2rem;
+        top: 50%;
+        transform: translateY(-50%);
+
+    }
+}
+
+
+@media only screen and (max-width: 567px) {
+
+    .marginclass{
+        margin: 0.3rem;
+    }
+    .overlay{
+        font-size: 1.0rem;
+        top: 50%;
+        transform: translateY(-50%);
+
+    }
+}
+
+
 

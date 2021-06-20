@@ -5,13 +5,11 @@ import Body from "./body/Body";
 class MainComponent extends Component {
     render() {
         return (
-               <Fragment>
-
+               <div>
                   <Header />
                    <Body />
 
-
-               </Fragment>
+               </div>
         );
     }
 }

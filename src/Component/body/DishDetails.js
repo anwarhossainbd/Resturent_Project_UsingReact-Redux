@@ -10,10 +10,13 @@ const DishDetails = (props) => {
             <Card className="marginclass">
                 <CardBody className="styleClass">
                     <CardImg top width="100%"   src={props.dishes.image} alt={props.dishes.name} />
-                    <CardTitle className="mt-3">{props.dishes.name} </CardTitle>
+                    <CardTitle className="mt-3"><h3>{props.dishes.name}</h3> </CardTitle>
                     <CardText>
-                        <p>{props.dishes.description}</p>
-                        <p> Price: {props.dishes.price}</p>
+                        {props.dishes.description}
+                    </CardText>
+
+                    <CardText>
+                        Price: {props.dishes.price}
                     </CardText>
 
                     <LoadComments comments={props.dishes.comments} />

@@ -36,3 +36,23 @@
     transform: rotate(360deg);
   }
 }
+
+
+
+.mybutton {
+  top: 50%;
+  transform: translateY(30%);
+  border-radius: 3rem;
+}
+
+.mybutton button{
+  background-color: black;
+  border-radius: 3rem;
+  color: white;
+  font-size: 0.9rem;
+  padding: 0.2rem 0.7rem;
+}
+
+.mybutton button:focus{
+  outline: none;
+}
