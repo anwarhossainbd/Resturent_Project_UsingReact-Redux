@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import DISHES from "../../data/dishes";
 import MenuItem from "./MenuItem";
+import COMMENTS from "../../data/comments";
 import DishDetails from "./DishDetails";
 import {  CardColumns ,Button, Modal, ModalBody, ModalFooter} from "reactstrap";
 
@@ -9,6 +10,7 @@ class Menu extends Component {
         super();
         this.state={
             dishes:DISHES,
+            comments:COMMENTS,
             selectDish:null,
             modal:false,
         }
@@ -31,6 +33,7 @@ class Menu extends Component {
 
 
     render() {
+        document.title="Menu"
         const menu=this.state.dishes.map(item=>{
             return (
                <MenuItem dish={item} key={item.id} OnDishSelect={()=>this.ondishselect(item)} />
@@ -42,7 +45,11 @@ class Menu extends Component {
         let dishDetails = null
         if (this.state.selectDish != null){
 
-            dishDetails =  <DishDetails dishes={this.state.selectDish} />
+            const comment=this.state.comments.filter(comments=>{
+                return comments.dishId === this.state.selectDish.id
+            })
+
+            dishDetails =  <DishDetails dishes={this.state.selectDish} comments={comment} />
 
         }
 
@@ -59,7 +66,7 @@ class Menu extends Component {
                     </CardColumns>
 
 
-                    <Modal isOpen={this.state.modal} onClick={this.toggle} >
+                    <Modal isOpen={this.state.modal} size="lg" onClick={this.toggle} >
 
                         <ModalBody>
                             {dishDetails}
@@ -68,6 +75,7 @@ class Menu extends Component {
                             <Button color="primary" onClick={this.toggle}>Close</Button>
                         </ModalFooter>
                     </Modal>
+
 
 
 

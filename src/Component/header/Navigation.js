@@ -22,10 +22,10 @@ class Navigation extends Component {
             <Fragment>
 
 
-                <Navbar color="dark" dark expand="md" >
+                <Navbar color="dark"  dark expand="md" >
                     <div className="container">
                         <NavbarToggler onClick={this.toggle} />
-                        <NavbarBrand href="/">Anwar Resturent</NavbarBrand>
+                        <NavbarBrand href="/">Anwar Restaurant</NavbarBrand>
 
                         <Collapse isOpen={this.state.isOpen} navbar>
                             <Nav className="mr-auto" navbar>
@@ -46,9 +46,6 @@ class Navigation extends Component {
                                 <NavItem>
                                     <Link to="/contact" className="nav-link ">Contact</Link>
                                 </NavItem>
-
-
-
 
                             </Nav>
                         </Collapse>
