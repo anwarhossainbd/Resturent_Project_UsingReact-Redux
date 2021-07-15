@@ -9,6 +9,7 @@ import {Provider} from "react-redux"
 
 
 function App() {
+    // console.log("Data",myStore.getState())
   return (
     <div className="App">
         <Provider store={myStore}>

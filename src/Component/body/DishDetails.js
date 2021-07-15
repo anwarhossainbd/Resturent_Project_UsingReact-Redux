@@ -1,4 +1,5 @@
 import React from 'react';
+import CommentForm from "./CommentForm";
 import {
     Card, CardImg, CardText, CardBody,
     CardTitle, CardImgOverlay
@@ -19,7 +20,10 @@ const DishDetails = (props) => {
                         Price: {props.dishes.price}
                     </CardText>
 
-                    <LoadComments comments={props.comments} />
+                    <LoadComments comments={props.comments} /> <br/>
+                    <hr />
+                    <CommentForm dishId={props.dishes.id} addComment={props.addComment}/>
+
                 </CardBody>
             </Card>
 
